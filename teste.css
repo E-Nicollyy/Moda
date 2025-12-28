@@ -310,3 +310,76 @@ body {
   /* Bloqueia interações com a página abaixo */
   pointer-events: all;
 }
+
+/* ================= MOBILE IMAGE ================= */
+/* 
+   Imagem exibida APENAS em dispositivos menores (mobile/tablet).
+   Substitui a imagem lateral do desktop para manter boa leitura
+   e evitar cortes indesejados em telas pequenas.
+*/
+.contact-image-mobile {
+  width: 100%;                 /* Ocupa toda a largura da tela */
+  height: 45vh;                /* Altura proporcional à viewport (45%) */
+  background: url("img/image.png") center/cover no-repeat;
+  /* 
+     - center: centraliza o foco da imagem
+     - cover: garante preenchimento sem distorção
+     - no-repeat: evita repetição
+  */
+}
+
+
+/* ================= RESPONSIVO ================= */
+/* 
+   Regras aplicadas somente para telas com largura menor que 992px
+   (tablets e celulares, seguindo o breakpoint padrão do Bootstrap).
+*/
+@media (max-width: 991px) {
+
+  /* 
+     Altera o layout principal do contato:
+     - Antes: imagem lateral + conteúdo ao lado
+     - Agora: layout em coluna (vertical)
+  */
+  .contact-split {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 
+     Ajusta o espaçamento interno do conteúdo principal
+     para telas menores, garantindo conforto visual.
+  */
+  .contact {
+    padding: 80px 8%;
+  }
+
+  /* 
+     O grid que antes tinha duas colunas passa a ter apenas uma.
+     Isso evita elementos espremidos no mobile.
+  */
+  .contact-wrapper {
+    grid-template-columns: 1fr; /* Uma única coluna */
+    gap: 50px;                  /* Espaçamento vertical entre blocos */
+    text-align: center;         /* Centraliza textos no mobile */
+  }
+
+  /* 
+     Ajuste do bloco de WhatsApp:
+     - Ícone e texto passam a ficar lado a lado
+     - Melhor leitura e clique em telas pequenas
+  */
+  .contact-whatsapp a {
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* 
+     Reduz levemente o tamanho do ícone do WhatsApp
+     para manter harmonia visual no mobile.
+  */
+  .contact-whatsapp i {
+    font-size: 36px;
+  }
+}
