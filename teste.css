@@ -1,0 +1,333 @@
+/* ================= RESET GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  background: #f0f0f0;
+  color: #0f0f0f;
+}
+
+/* ================= HEADER ================= */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 60px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+  background-color: #0f0f0f;
+  color: #c9a24d;
+}
+
+.header .logo {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.header a {
+  margin-left: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #c9a24d;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #beb9b9;
+}
+
+.hero img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+/* ================= MANIFESTO ================= */
+.manifesto {
+  background: #e7e1d5;
+  padding: 120px 60px;
+}
+
+.manifesto h2 {
+  font-weight: 300;
+  color: #c9a24d;
+}
+
+/* Imagem solo */
+.manifesto-img {
+  max-height: 520px;
+  width: auto;
+  object-fit: cover;
+}
+
+/* ================= PROCESSO / CARDS ================= */
+.processo-item {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+  transition: transform .3s ease;
+}
+
+.processo-item:hover {
+  transform: translateY(-6px);
+}
+
+.processo-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.processo-item h3 {
+  margin: 20px;
+  color: #c9a24d;
+  font-weight: 400;
+}
+
+.processo-item p {
+  margin: 0 20px 30px;
+  font-size: 14px;
+}
+
+/* ================= GALERIA ================= */
+.galeria {
+  background: #0f0f0f;
+  color: #ffffff;
+  padding: 120px 60px;
+}
+
+.galeria h2 {
+  color: #c9a24d;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.galeria-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  filter: grayscale(20%);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.galeria-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+/* ================= ABOUT ================= */
+.about {
+  background: #e7e1d5;
+  padding: 120px 60px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-weight: 300;
+  color: #111;
+}
+
+.about-text p {
+  max-width: 460px;
+  font-size: 14px;
+}
+
+.about-img {
+  max-height: 420px;
+  width: auto;
+  object-fit: cover;
+}
+
+/* ================= CONTATO ================= */
+.contact {
+  padding: 140px 10%;
+  background: #f6f5f3;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 80px;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+/* Formulário */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #111;
+  background: transparent;
+  padding: 10px 0;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Botão */
+.btn-dark {
+  background: #0f0f0f;
+  color: #c9a24d;
+  border: none;
+  padding: 12px 30px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* ================= WHATSAPP ================= */
+.contact-whatsapp a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #0f0f0f;
+  transition: transform 0.3s ease;
+}
+
+.contact-whatsapp a:hover {
+  transform: translateY(-5px);
+}
+
+.contact-whatsapp i {
+  font-size: 42px;
+  color: #c9a24d;
+  margin-bottom: 10px;
+}
+
+.contact-whatsapp span {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #0f0f0f;
+  color: #ffffff;
+  padding: 40px;
+  text-align: center;
+}
+
+.footer a {
+  margin: 0 10px;
+  color: #c9a24d;
+  text-decoration: none;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .contact-whatsapp a {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+
+/* ================= CONTATO SPLIT ================= */
+.contact-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* Lado esquerdo - imagem */
+.contact-image {
+  background: url("img/image.png") center/cover no-repeat;
+}
+
+/* Lado direito - mantém seu layout */
+.contact {
+  padding: 140px 10%;
+  background: #e7e1d5;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 900px) {
+  .contact-split {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-image {
+    height: 45vh;
+  }
+}
+
+
+/* ================= TRANSIÇÃO ENTRE PÁGINAS ================= */
+
+/* Container da transição em tela cheia */
+#transition {
+  /* Mantém o elemento fixo na viewport, independente do scroll */
+  position: fixed;
+
+  /* Ocupa toda a tela (top, right, bottom, left = 0) */
+  inset: 0;
+
+  /* Cor de fundo da transição (preto suave, editorial) */
+  background: #111;
+
+  color: #beb9b9;
+
+  /* Centraliza o conteúdo interno */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Inicia invisível */
+  opacity: 0;
+
+  /* Impede interações enquanto invisível */
+  pointer-events: none;
+
+  /* Animação suave ao ativar/desativar */
+  transition: 0.6s;
+
+  /* Garante que fique acima de todos os elementos */
+  z-index: 999;
+}
+
+/* Estado ativo da transição */
+#transition.active {
+  /* Torna o overlay visível */
+  opacity: 1;
+
+  /* Bloqueia interações com a página abaixo */
+  pointer-events: all;
+}
