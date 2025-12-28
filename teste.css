@@ -239,27 +239,6 @@ body {
   text-decoration: none;
 }
 
-/* ================= RESPONSIVO ================= */
-@media (max-width: 768px) {
-  .about {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-    gap: 50px;
-    text-align: center;
-  }
-
-  .contact-whatsapp a {
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-  }
-}
-
-
 /* ================= CONTATO SPLIT ================= */
 .contact-split {
   display: grid;
